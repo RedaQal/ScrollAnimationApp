@@ -8,11 +8,12 @@
 .container{
   background: rgb(57, 57, 57);
   min-height: 100vh;
-  width: 100%;
+  width: 100;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .container div{
   width: 400px;
@@ -61,4 +62,10 @@
 }
 .show:nth-child(even){
   transform: translateX(0);
+}
+@media (max-width:480px) {
+  .container div{
+    width: 200px;
+    height: 150px;
+  }
 }
