@@ -22,7 +22,6 @@
   align-items: center;
   border-radius: 20px;
   margin: 20px;
-  transition: 2s ease;
 }
 .boxb{
   background-color: blue;
@@ -44,9 +43,22 @@
 }
 .hidden{
   opacity: 0;
+  filter: blur(8px);
+  transition: 1.25s ease;
+}
+.hidden:nth-child(even){
+  transform: translateX(-100%);
+}
+.hidden:nth-child(odd){
   transform: translateX(100%);
 }
 .show{
   opacity: 1;
-  transform: translateX(0px);
+  filter: blur(0);
+}
+.show:nth-child(odd){
+  transform: translateX(0);
+}
+.show:nth-child(even){
+  transform: translateX(0);
 }
